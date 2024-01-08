@@ -1,0 +1,1679 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Poppins:wght@600&display=swap');
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* For the scrollbar thumb (the draggable handle) */
+::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
+
+
+
+
+body {
+
+
+    background: #2c2f33;
+}
+
+
+.parentcon {
+    scroll-snap-type: y mandatory;
+    display: grid;
+    grid-template-columns: 90px 0.3fr 1fr;
+    grid-template-rows: 840px;
+
+}
+
+.Section {
+
+
+}
+
+.Section nav {
+    position: fixed;
+    background: rgba(32, 34, 37, 1);
+    width: 80px;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    z-index: 5;
+}
+
+.Section ul {
+    display: flex;
+
+    transform: translateY(10px);
+    flex-direction: column;
+    place-items: center;
+    row-gap: 20px;
+}
+
+
+li {
+    list-style-type: none;
+
+
+}
+
+.onbtn {
+    background: #23a559;
+    border-radius: 35%;
+}
+.Section nav ul li button {
+    transition: ease-in 0.19s;
+    border: none;
+    background: #2c2f33;
+         width: 100%;
+    padding: 14px;
+    border-radius: 50%;
+}
+
+.Section nav ul li:nth-child(1) button {
+    display: none;
+    background: none;
+}
+
+.Section nav ul li button img {
+    opacity: 0.9;
+    width: 23px;
+    height: 23px;
+    aspect-ratio: 1/5;
+    object-fit: contain;
+    filter: invert(100%);
+
+}
+
+.Section nav ul li:nth-child(2) button img {
+
+    filter: none;
+    border-radius: 50%;
+
+}
+
+
+.Section nav ul li:nth-child(5) button img {
+
+
+    width: 23px;
+    height: 23px;
+}
+
+
+.Section nav ul li:nth-child(2n) button:hover, .Section nav ul li:nth-child(3) button:hover,.Section nav ul li:nth-child(5) button:hover{
+    background: #23a559;
+    border-radius: 35%;
+    filter: brightness(-40);
+}
+
+.parentcon section:nth-child(2) div div:hover {
+
+    background: #23a559;
+
+
+}
+
+.parentcon section:nth-child(2) {
+
+
+}
+.Section nav ul li:last-child button:hover{
+
+    background: #df3f46;
+}
+
+    /*.parentcon section:nth-child(2) div div menu::after{*/
+/*opacity: 1;*/
+/*content: "Total";*/
+
+
+/*    font-weight: bold;*/
+/*    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+
+/*color: white;*/
+
+/*}*/
+/*.parentcon section:nth-child(2) div div:hover menu::after{*/
+
+/*    color: black;*/
+/*}*/
+.parentcon section:nth-child(2) div div:hover h1 {
+    color: black;
+}
+
+.parentcon section:nth-child(2) div div h1:nth-child(2) {
+
+    font-size: clamp(2.8125rem, 5.1563rem + -7.5vw, 0.9375rem);
+    font-weight: 600;
+}
+
+.parentcon section:nth-child(2) div div h1:nth-child(1) {
+    font-size: calc(0.675rem + 0.23vw);
+
+    font-weight: 500 !important;
+}
+
+.parentcon section:nth-child(2) div div menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.parentcon section:nth-child(2) div div:hover img {
+    filter: none;
+    opacity: 1;
+}
+
+
+.Section nav ul li:nth-child(2) button:hover {
+    border-radius: 35%;
+    background: #5865F2;
+}
+
+.Section nav ul li button::after {
+    transform: translateY(-4px);
+    width: 150px;
+    font-family: "Whitney", "Whitney SSm A", "Whitney SSm B", sans-serif;
+    font-weight: bold;
+
+
+}
+
+.Section nav ul li:nth-child(2) button::after {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    content: "Admin";
+    width: 100px;
+
+    transition: ease-in 0.9s;
+    display: none;
+    border-radius: 7px;
+    left: 55px;
+    background: #161614;
+}
+
+.Section nav ul li:nth-child(3) button::after {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    content: "Journal Sites";
+    width: 110px;
+    display: none;
+    border-radius: 7px;
+    transition: ease-in 0.19s;
+    left: 55px;
+    background: #161614;
+}
+
+.Section nav ul li:nth-child(4) button::after {
+    text-align: center;
+    position: absolute;
+
+    content: "Ebook Category";
+    width: 110px;
+    z-index: 2;
+    transition: ease-in 0.19s;
+    color: white;
+    left: 55px;
+    display: none;
+    border-radius: 7px;
+    padding: 10px;
+    background: #161614;
+}
+
+.Section nav ul li:nth-child(5) button::after {
+    text-align: left;
+    position: absolute;
+    content: "Research Abstart ";
+    width: 110px;
+    padding: 10px;
+    color: white;
+    left: 55px;
+    display: none;
+
+    border-radius: 7px;
+    background: #161614;
+    transition: ease-in 0.19s;
+}
+
+.Section nav ul li:nth-child(6) button::after {
+    text-align: left;
+    position: absolute;
+    content: "Logout";
+    width: 50px;
+    padding: 10px;
+    color: white;
+    left: 55px;
+    display: none;
+
+    border-radius: 7px;
+    background: #df3f46;
+    transition: ease-in 0.19s;
+}
+
+
+.Section nav ul li:nth-child(4) button:hover::after {
+    display: inline-block;
+}
+
+.Section nav ul li:nth-child(3) button:hover::after {
+    display: inline-block;
+
+}
+
+.Section nav ul li:nth-child(2) button:hover::after {
+    display: inline-block;
+
+}
+
+.Section nav ul li:nth-child(5) button:hover::after {
+    display: inline-block;
+
+}
+.Section nav ul li:nth-child(6) button:hover::after {
+    display: inline-block;
+
+}
+
+section img {
+    width: 100%;
+}
+
+
+.parentcon section:nth-child(3) {
+    width: 100%;
+    height: 100vh;
+    background: #2c2f33;
+
+
+}
+
+.parentcon section:nth-child(2) {
+    display: flex;
+    scroll-snap-align: start;
+    flex-direction: row;
+    background: #2b2d31;
+}
+
+section:nth-child(3) {
+    gap: 20px;
+    width: 100%;
+    background: #313338;
+    grid-row: 1/3;
+    grid-column: 3/3;
+
+}
+
+
+section div:nth-child(1) h1 {
+    color: white;
+    font-weight: bold;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+}
+
+section div:nth-child(1) h1:nth-child(1) {
+    color: white;
+    font-weight: bold;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    opacity: 0.6;
+}
+
+
+section:nth-child(2) div img {
+    width: 100%;
+    height: 30vh;
+    border-radius: 10px;
+    image-rendering: smooth;
+}
+
+.parentcon section:nth-child(2) {
+
+    width: 100%;
+    justify-content: center;
+
+}
+
+
+.parentcon section:nth-child(2) div {
+    display: flex;
+    row-gap: 40px;
+    justify-content: center;
+    flex-direction: column;
+    grid-row-gap: 20px;
+    width: 90%;
+    border-radius: 10px;
+    scroll-snap-align: start;
+
+}
+
+.parentcon section:nth-child(2) div div {
+    width: 100%;
+
+    height: max(30%);
+    background: #313338;
+
+    display: flex;
+    transition: ease-in-out 0.5s;
+
+
+}
+
+.parentcon section:nth-child(2) div div:nth-child(2) {
+    width: 100%;
+
+    height: 15%;
+
+    background: #23a559;
+    display: flex;
+    transition: ease-in-out 0.5s;
+
+
+}
+
+.parentcon section:nth-child(2) div div:nth-child(3) {
+    width: 100%;
+
+    height: 15%;
+
+    background: #5865F2;
+    display: flex;
+    transition: ease-in-out 0.5s;
+
+
+}
+
+
+
+.parentcon section:nth-child(2) div:nth-child(2) img {
+    width: 20%;
+    height: 32%;
+    opacity: 1;
+    filter: invert(100%);
+    aspect-ratio: 1/4;
+}
+
+
+.parentcon section:nth-child(2) div:nth-child(3) img {
+    width: 15%;
+    height: 28%;
+    opacity: 1;
+    filter: invert(100%);
+    aspect-ratio: 1/4;
+}
+
+.parentcon section:nth-child(2) div:nth-child(2), .parentcon section:nth-child(2) div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.parentcon section:nth-child(2) div:nth-child(1) div:nth-child(1) {
+    background: url("libraryact/campus.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.parentcon section:nth-child(3) div nav {
+
+    width: 100%;
+    height: 50px;
+    background: #2c2f33;
+    -webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+}
+
+
+.parentcon section:nth-child(3) div nav {
+
+    display: flex;
+    justify-content: end;
+    place-items: center;
+}
+
+
+.parentcon section:nth-child(3) div nav ul {
+    display: flex;
+    transform: translateX(-20px);
+    column-gap: 20px;
+
+}
+
+
+.seacrch-input {
+    position: relative;
+    color: white;
+}
+
+.seacrch-input .input {
+    width: 150px;
+    padding: 10px 0px 10px 10px;
+    border-radius: 5px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    color: white;
+    height: 25px;
+    background: #1e1f22;
+
+}
+
+.seacrch-input svg {
+    position: absolute;
+    top: 50%;
+
+    right: 10px;
+    transform: translate(0, -50%);
+}
+
+.seacrch-input .input:focus {
+
+    width: 250px;
+}
+
+/* Handle */
+.form {
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    place-items: center;
+    background: green;
+    z-index: 6;
+    background: rgba(32, 34, 37, 0.007);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(114, 97, 97, 0.08);
+
+}
+
+.form form {
+    position: relative;
+    width: clamp(30%, 20%, 50%);
+    height: 75%;
+    background: white;
+    border-radius: 5px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form form input {
+    width: 75%;
+    height: 40px;
+    border: 1px solid grey;
+    filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    border-radius: 5px;
+    text-indent: 20px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #d9ecf2;
+
+}
+
+.form form img {
+    width: 45%;
+height: 20%;
+border-radius:10px ;
+background: #313338;
+    border:3px solid #5865F2;
+}
+
+.form form div {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 10px;
+    position: relative;
+}
+
+.form form div button {
+    position: absolute;
+    top: 5px;
+ right: 20px;
+}
+
+.form form div button img {
+    width: 20px;
+    height: 20px;
+    background: none;
+border: none;
+}
+
+.inputadd {
+    color: #444;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.form form button {
+    width: 75%;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    background-color: #5865F2;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.form form div button:last-child {
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+.form form button:last-child {
+    background: #23a559;
+}
+
+
+
+
+.catform {
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    place-items: center;
+    background: green;
+    z-index: 6;
+    background: rgba(32, 34, 37, 0.007);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(114, 97, 97, 0.08);
+
+}
+
+.catform form {
+    position: relative;
+    width: clamp(30%, 20%, 50%);
+    height: 75%;
+    background: white;
+    border-radius: 5px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.catform  form input {
+    width: 75%;
+    height: 40px;
+    border: 1px solid grey;
+    filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    border-radius: 5px;
+    text-indent: 20px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #d9ecf2;
+
+}
+
+.catform  form img {
+    width: 45%;
+    height: 20%;
+    border-radius:10px ;
+    background: #313338;
+    border:3px solid #5865F2;
+}
+
+.catform  form div {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 10px;
+    position: relative;
+}
+
+.catform form div button {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+.catform  form div button img {
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+}
+
+.catform .inputadd {
+    color: #444;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.catform  form button {
+    width: 75%;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    background-color: #5865F2;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.catform form div button:last-child {
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+.catform  form button:last-child {
+    background: #23a559;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Handle */
+.updateform {
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    place-items: center;
+    background: green;
+    z-index: 6;
+    background: rgba(32, 34, 37, 0.007);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(114, 97, 97, 0.08);
+
+}
+
+.updateform  form {
+    position: relative;
+    width: clamp(30%, 20%, 50%);
+    height: 75%;
+    background: white;
+    border-radius: 5px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.updateform  form input {
+    width: 75%;
+    height: 40px;
+    border: 1px solid grey;
+    filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    border-radius: 5px;
+    text-indent: 20px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #d9ecf2;
+
+}
+
+.updateform  form img {
+    width: 45%;
+    height: 20%;
+    border-radius:10px ;
+    background: #313338;
+    border:3px solid #5865F2;
+}
+
+.updateform  form div {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 10px;
+    position: relative;
+}
+
+.updateform  form div button {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
+.updateform form div button img {
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+}
+
+.updateform .inputadd {
+    color: #444;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.updateform  form button {
+    width: 75%;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    background-color: #5865F2;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.updateform  form div button:last-child {
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+.updateform form button:last-child {
+    background: #23a559;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parentcon section:nth-child(3) div:nth-child(2) {
+    transform: translateY(35px);
+    width: 100%;
+    height: 87%;
+    display: flex;
+    overflow-y: scroll;
+    justify-content: center;
+
+
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) div {
+    width: 90%;
+    height: 100%;
+    border-radius: 7px;
+
+    background: whitesmoke;
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) div
+table {
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+
+    border-collapse: separate;
+    padding: 20px;
+    border-spacing: 0px 15px;
+}
+
+/*.parentcon section:nth-child(3) div:nth-child(2) table  tbody{*/
+/*display: flex;*/
+/*    flex-direction: column;*/
+/*    width: 100%;*/
+/*    }*/
+.parentcon section:nth-child(3) div:nth-child(2) table thead {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    position: sticky;
+    width: 100%;
+    top: 0px;
+    background-color: whitesmoke;
+    height: 50px;
+    gap: 20px;
+    z-index: 1;
+}
+/*.parentcon section:nth-child(3) div:nth-child(2) table  tbody tr  {*/
+/*    text-overflow: ellipsis;*/
+/*  overflow: hidden;*/
+/*    width: 399px;*/
+/*    height: 20px;*/
+/*}*/
+
+.parentcon section:nth-child(3) div:nth-child(2) table thead th {
+
+    padding: 20px;
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td {
+    padding: 0px 20px;
+    gap: 10px;
+
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div {
+
+    width: 100%;
+
+    background: transparent;
+    gap: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button {
+    background: transparent;
+    border: 0;
+transition: ease-in 1s;
+position: relative;
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(1)::after {
+
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    border-radius: 4px;
+    left: -20px;
+    background: #5865F2;
+    padding: 5px 20px;
+    color: white;
+    font-weight: bold;
+ z-index:3;
+    transform: translateY(20px);
+    opacity: 0;
+
+}
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(1):hover::after {
+    content: "Edit";
+
+    position: absolute;
+    transform: translateY(-25px);
+    background: #5865F2;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    font-weight: bold;
+    z-index:3;
+    top: -10px;
+    opacity: 1;
+}
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(1):hover::before {
+    content: "";
+
+    position: absolute;
+
+    background: #5865F2;
+width: 20px;
+    height: 20px;
+
+transform: translateY(-15px)rotate(45deg);
+    font-weight: bold;
+    z-index:3;
+    top: -10px;
+    opacity: 1;
+}
+
+
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(2)::after {
+
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    border-radius: 4px;
+    left: -28px;
+    background: #df3f46;;
+    padding: 5px 20px;
+    color: white;
+    font-weight: bold;
+    z-index:3;
+    transform: translateY(20px);
+    opacity: 0;
+
+}
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(2):hover::after {
+    content: "Delete";
+
+    position: absolute;
+    transform: translateY(-25px);
+    background:#df3f46;;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    font-weight: bold;
+    z-index:3;
+    top: -10px;
+    opacity: 1;
+}
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(2):hover::before {
+    content: "";
+
+    position: absolute;
+
+    background: #df3f46;;
+    width: 20px;
+    height: 20px;
+
+    transform: translateY(-15px)rotate(45deg);
+    font-weight: bold;
+    z-index:3;
+    top: -10px;
+    opacity: 1;
+}
+
+
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(3)::after {
+
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    border-radius: 4px;
+    left: -20px;
+    background: #2b2d31;
+    padding: 5px 20px;
+    color: white;
+    font-weight: bold;
+    z-index:3;
+    transform: translateY(20px);
+    opacity: 0;
+
+}
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(3):hover::after {
+    content: "Add";
+
+    position: absolute;
+    transform: translateY(-25px);
+    background: #2b2d31;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    font-weight: bold;
+    z-index:3;
+    top: -10px;
+    opacity: 1;
+}
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td div button:nth-child(3):hover::before {
+    content: "";
+
+    position: absolute;
+
+    background: #2b2d31;
+    width: 20px;
+    height: 20px;
+
+    transform: translateY(-15px)rotate(45deg);
+    font-weight: bold;
+    z-index:3;
+    top: -10px;
+    opacity: 1;
+}
+
+
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td:nth-child(1) img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 50%;
+    z-index: 1;
+    border: 2px solid #5865F2;
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td:last-child img {
+    width: 25px;
+    height: 25px;
+
+
+}
+
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td:last-child img:hover {
+    color: blue;
+    filter: invert(100%);
+
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody td:nth-child(1) img:hover {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-75px, -50px);
+    border: 4px solid #5865F2;
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody tr {
+    color: #444;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+
+    border: none;
+    height: 65px;
+    background-color: #d9ecf2;
+    transition: ease-in-out 0.2s;
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) table tbody tr:hover {
+
+    background: #23a559;
+    color: white;
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) td:first-child {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.parentcon section:nth-child(3) div:nth-child(2) td:last-child {
+
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+
+.headername {
+    color: #444;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    transform: translateY(15px);
+}
+
+
+/*loader*/
+.parentloader {
+
+    z-index: 1;
+    position: absolute;
+    justify-content: center;
+    width: clamp(30%, 20%, 50%);
+    height: 75%;
+    border-radius: 5px;
+    background: #2b2d31;
+    display: none;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(114, 97, 97, 0.08);
+    place-items: center;
+    background: rgba(32, 34, 37, 0.7);
+
+}
+
+
+.loader {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+
+    border: 8px solid #1cd42550;
+    border-top-color: #23a559;
+    animation: spin013151 1s linear infinite;
+    border-radius: 100%;
+}
+
+.deletebody {
+    justify-content: center;
+
+    border-radius: 5px;
+    background: #2b2d31;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(114, 97, 97, 0.08);
+    place-items: center;
+    background: rgba(32, 34, 37, 0.7);
+    display: none;
+    z-index: 6;
+
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+.deletebody div{
+    width: 40%;
+    height: 50%;
+    background: #313338;
+    border-radius: 10px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: ease-in 1s;
+}
+.deletebody div div:nth-child(3){
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    place-items: center;
+}
+.deletebody div div:nth-child(1){
+width: 100%;
+    height: 15%;
+    background:#23a559;
+   position: relative;
+border-radius:10px 10px 0px 0px;
+}
+.deletebody div div:nth-child(2){
+    text-align: center;
+    width: 100%;
+    height: 25%;
+    border-radius: 0px;
+    background: #2c2f33;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.deletebody div div:nth-child(1) button{
+    width: 10%;
+background: none;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+.deletebody div div:nth-child(1) button img{
+    height: 20px;
+ width: 20px;
+
+}
+.deletebody div div:nth-child(2){
+    width: 100%;
+    height: 17%;
+    border-radius: 0px;
+    background: #2c2f33;
+    color: #fff;
+    font-size: 10px;
+    -webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+    font-weight: bold;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.deletebody div div:nth-child(1) button{
+    width: 10%;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 8px;
+}
+.deletebody div div:nth-child(1) button img{
+    height: 20px;
+    width: 20px;
+
+}
+
+
+
+
+.deletebody div div:nth-child(4){
+    width: 90%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+gap: 10px;
+    border-radius: 0px;
+    background: transparent;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.deletebody div div:nth-child(4) button{
+    width: 20%;
+      height: 40%;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+.deletebody div div:nth-child(4) button:nth-child(1){
+
+    background: #5865F2;
+    border: none;
+
+
+
+}
+.deletebody div div:nth-child(4) button:nth-child(2){
+
+    background: #df3f46;
+    border: none;
+
+}
+.deletebody div div:nth-child(4) button img{
+    height: 20px;
+    width: 20px;
+
+}
+
+
+
+.addbutton {
+    border-radius: 5px;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #5865F2;
+    background:#5865F2;
+}
+
+.addbutton, .button__icon, .button__text {
+    transition: all 0.3s;
+    font-size: 10px;
+}
+
+.addbutton .button__text {
+    transform: translateX(20px);
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.addbutton .button__icon {
+    position: absolute;
+    border-radius: 5px;
+    transform: translateX(69px);
+    height: 100%;
+    width: 30px;
+
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addbutton .svg {
+    width: 30px;
+    stroke: #fff;
+
+}
+
+.addbutton:hover {
+    background: #34974d;
+}
+
+.addbutton:hover .button__text {
+    color: transparent;
+}
+
+.addbutton:hover .button__icon {
+    width: 100px;
+    transform: translateX(0);
+}
+
+.addbutton:active .button__icon {
+    background-color: #2e8644;
+}
+
+.addbutton:active {
+    border: 1px solid #2e8644;
+}
+
+
+.success {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 270px;
+    position: absolute;
+    z-index: 18;
+top: 10px;
+    right: 10px;
+
+    padding: 12px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    background: #84D65A;
+    border-radius: 8px;
+    transition: 2s;
+    overflow:hidden;
+    box-shadow: 0px 0px 5px -3px #111;
+}
+
+.success__icon {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-2px);
+    margin-right: 8px;
+}
+
+.success__icon path {
+    fill: #393A37;
+}
+
+.success__title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #393A37;
+text-align: center;
+}
+
+.success__close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.success__close path {
+    fill: #393A37;
+}
+
+
+
+
+@keyframes spin013151 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .parentcon {
+        grid-template-columns: 90px 1fr;
+
+    }
+
+    .form form {
+        width: clamp(80%, 60%, 50%);
+    }
+    .catform form {
+        width: clamp(80%, 60%, 50%);
+    }
+    .update form form {
+        width: clamp(80%, 60%, 50%);
+    }
+
+    .parentloader {
+        width: clamp(80%, 60%, 50%);
+    }
+
+    .parentcon section:nth-child(2) {
+        width: 100%;
+
+
+    }
+    .deletebody div{
+        width: 70%;
+        height: 50%;
+
+    }
+    .deletebody div div:nth-child(2) {
+        font-size: 8px;
+    }
+    .headername {
+        color: #444;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    section:nth-child(3) {
+
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    .parentcon section:nth-child(3) div nav {
+        border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .seacrch-input {
+
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) table tbody td:nth-child(1) img:hover {
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+        position: absolute;
+        transform: translate(-5px, 0px);
+        border: 4px solid #5865F2;
+    }
+
+    .seacrch-input .input {
+        width: 35px;
+
+    }
+
+    .seacrch-input .input::placeholder {
+        color: transparent;
+
+    }
+
+    .seacrch-input svg {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+    }
+
+    .seacrch-input .input:focus::placeholder {
+        color: white;
+
+    }
+
+    .seacrch-input .input:focus {
+        width: 150px;
+    }
+
+
+    .parentcon section:nth-child(3) div:nth-child(2) table tbody td img {
+
+        transform: translateX(10px);
+    }
+
+
+    .parentcon section:nth-child(3) div:nth-child(2) table tr td {
+        text-indent: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        text-align: left;
+        color: #444;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+
+        height: 60px;
+        background-color: #d9ecf2;
+
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) table thead {
+        display: none;
+
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) table tr td::before {
+        content: attr(data-name);
+        font-weight: bold;
+
+        opacity: 0.8;
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) td:first-child {
+        border-bottom-left-radius: 0px;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) td:last-child {
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        padding-bottom: 15px;
+        height: 100%;
+    }
+
+
+    .parentcon section:nth-child(3) div:nth-child(2) div
+    table {
+        width: 100%;
+
+        text-align: center;
+
+        border-collapse: separate;
+
+        border-spacing: 1px 10px;
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) table tbody tr td:hover {
+
+        background: #23a559;
+        color: white;
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) td:first-child {
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) td:last-child {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px
+    }
+
+    .parentcon section:nth-child(3) div:nth-child(2) table tbody tr:hover {
+
+        background: none;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .parentcon section:nth-child(3) div:nth-child(2) table thead {
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 350px) {
+    .deletebody div{
+        width: 100%;
+        height: 50%;
+
+    }
+    .deletebody div div:nth-child(4) button{
+        font-size: 9px;
+    }
+}

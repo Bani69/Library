@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>LOGIN FORM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="promt">
+    <div id="check-res"></div></div>
+
+<button id="login"> LOGIN</button>
+<div class="container" id="loginform">
+    <button class="closebtn" id="closebtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+    </button>
+    <form id="signup-form" enctype="multipart/form-data">
+
+        <h1>Sign Up</h1>
+        <label for="uname">Username:</label>
+        <input type="text" name="uname" id="uname"><br>
+        <label for="repassword">Password:</label>
+        <input type="password" name="pword" id="repassword"><br>
+        <label for="rpword">Re-enter Password:</label>
+        <input type="password" name="rpword" id="rpword"><br>
+
+        <input type="hidden" name="userID" value="0"><br>
+
+        <button type="submit" class="green">Save</button>
+        <button>Cancel</button>
+
+
+    </form>
+</div>
+
+<script>
+    $("#signup-form").on("submit", function(event){
+        event.preventDefault();
+
+        var signupform = $("#signup-form").serialize();
+        $.ajax({
+            url:'check.php',
+            method:'POST',
+            data:signupform,
+            success:function (response){
+                if(response=="Y"){
+                    $.ajax({
+                        url:'saving-user.php',
+                        method:'POST',
+                        data:signupform,
+                        success:function (data){
+                            $("#check-res").html(data);
+
+                        }
+                    });
+
+                }else{
+                    $("#check-res").html("Password mismatched!!");
+
+                }
+            }
+
+        })
+    });
+</script>
+
+
+
+</script>
+
+</body>
+</html>
